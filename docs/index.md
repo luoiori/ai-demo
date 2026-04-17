@@ -10,6 +10,7 @@ LLM 是 `Large Language Model` 的缩写，可以拆成三层意思：
 - **Language**：它处理的是语言，本质上围绕文本工作。
 - **Model**：它不是知识库，而是一个通过训练学会语言规律的模型。
 
+
 <div class="summary-box">
   <p><strong>一句话：</strong>LLM 是一个在海量文本上训练出来、擅长根据上下文生成语言的模型。</p>
 </div>
@@ -17,8 +18,7 @@ LLM 是 `Large Language Model` 的缩写，可以拆成三层意思：
 ## 2. 它为什么会说得像那么回事
 
 这里最重要的其实只有两点：
-
-- **本质**：根据上下文预测下一个 token。
+- **本质**：根据上下文预测下一个 token(概率生成器)。
 - **关键机制**：Transformer 里的 Attention 会帮助它判断当前应该关注哪些词。
 
 例如输入：
@@ -39,6 +39,12 @@ LLM 是 `Large Language Model` 的缩写，可以拆成三层意思：
   <img src="/images/whiteboard-token-flow.svg" alt="LLM 从输入到输出的处理流程图" />
   <figcaption>LLM 的核心不是“先想明白再回答”，而是沿着上下文不断做下一步预测。</figcaption>
 </figure>
+
+常见误区：更聪明的搜索引擎.
+
+会**胡说八道** -> 追求**合理**而非**正确**
+
+不是搜索, 不是知识库. 是文字生成器 -> 所以它会说错, 因此也有**创造力**
 
 ## 3. 它为什么有用
 
