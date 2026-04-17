@@ -1,0 +1,52 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: 700 30px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .label { font: 700 24px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .body { font: 400 18px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #475569; }
+      .small { font: 400 16px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #64748b; }
+      .strong { font: 700 26px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" rx="24" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="1152" height="652" rx="20" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+
+  <text x="72" y="86" class="title">除了 LLM，还有哪些常见模型</text>
+  <text x="72" y="118" class="small">一个完整的 AI 应用，通常不是只有一个 LLM，而是多种模型协同工作。</text>
+
+  <rect x="454" y="182" width="292" height="132" rx="18" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2"/>
+  <text x="600" y="234" text-anchor="middle" class="strong">LLM</text>
+  <text x="600" y="268" text-anchor="middle" class="body">负责理解和生成语言</text>
+
+  <rect x="92" y="190" width="250" height="116" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="217" y="236" text-anchor="middle" class="strong">Embedding</text>
+  <text x="217" y="268" text-anchor="middle" class="body">把文本映射成向量</text>
+
+  <rect x="858" y="190" width="250" height="116" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="983" y="236" text-anchor="middle" class="strong">Reranker</text>
+  <text x="983" y="268" text-anchor="middle" class="body">把候选结果重新排序</text>
+
+  <rect x="92" y="384" width="250" height="116" rx="18" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="217" y="430" text-anchor="middle" class="strong">Vision Model</text>
+  <text x="217" y="462" text-anchor="middle" class="body">看图、识图、理解页面</text>
+
+  <rect x="454" y="384" width="292" height="116" rx="18" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+  <text x="600" y="430" text-anchor="middle" class="strong">Speech Model</text>
+  <text x="600" y="462" text-anchor="middle" class="body">语音转文字，文字转语音</text>
+
+  <rect x="858" y="384" width="250" height="116" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+  <text x="983" y="430" text-anchor="middle" class="strong">Image Model</text>
+  <text x="983" y="462" text-anchor="middle" class="body">根据文字生成图片</text>
+
+  <path d="M342 248H430" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M770 248H846" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M217 306V350" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M600 314V350" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M983 306V350" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M217 350H983" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="156" y="560" width="888" height="76" rx="16" fill="#0F172A"/>
+  <text x="600" y="592" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="700" fill="white">一个完整 AI 系统 = LLM + 检索 + 排序 + 多模态能力</text>
+  <text x="600" y="620" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#CBD5E1">LLM 很重要，但它通常不是整套系统里唯一的模型。</text>
+</svg>

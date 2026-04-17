@@ -1,0 +1,30 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="820" rx="40" fill="#FCFCF9"/>
+  <rect x="28" y="28" width="1344" height="764" rx="30" fill="#FFFDF9" stroke="#1F2A37" stroke-width="5"/>
+  <text x="86" y="116" fill="#1F2A37" font-size="44" font-family="Comic Sans MS, Marker Felt, cursive">为什么叫“大模型”</text>
+  <text x="88" y="164" fill="#5B6773" font-size="25" font-family="IBM Plex Sans, sans-serif">不是只靠一个新算法，而是三种规模一起放大</text>
+
+  <circle cx="505" cy="420" r="170" fill="#EAF4FF" stroke="#0F6CBD" stroke-width="5"/>
+  <circle cx="760" cy="300" r="170" fill="#FFF4D8" stroke="#D97706" stroke-width="5"/>
+  <circle cx="895" cy="500" r="170" fill="#EEFBEA" stroke="#2E7D32" stroke-width="5"/>
+
+  <text x="424" y="403" fill="#0F6CBD" font-size="40" font-family="Comic Sans MS, Marker Felt, cursive">数据规模</text>
+  <text x="403" y="452" fill="#44515E" font-size="26" font-family="IBM Plex Sans, sans-serif">网页 / 书籍 / 代码 / 对话</text>
+
+  <text x="694" y="282" fill="#B45309" font-size="40" font-family="Comic Sans MS, Marker Felt, cursive">参数规模</text>
+  <text x="689" y="331" fill="#5B6773" font-size="26" font-family="IBM Plex Sans, sans-serif">从几十亿到上万亿</text>
+
+  <text x="828" y="483" fill="#2E7D32" font-size="40" font-family="Comic Sans MS, Marker Felt, cursive">算力规模</text>
+  <text x="808" y="532" fill="#5B6773" font-size="26" font-family="IBM Plex Sans, sans-serif">GPU / TPU 集群</text>
+
+  <circle cx="730" cy="445" r="116" fill="#FFFFFF" stroke="#1F2A37" stroke-width="5"/>
+  <text x="658" y="428" fill="#1F2A37" font-size="34" font-family="Comic Sans MS, Marker Felt, cursive">能力跃迁</text>
+  <text x="628" y="472" fill="#E11D48" font-size="30" font-family="Comic Sans MS, Marker Felt, cursive">Emergent</text>
+
+  <path d="M192 632C360 690 510 710 665 704" stroke="#D8E2EA" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 14"/>
+  <path d="M970 152C1072 176 1164 226 1228 302" stroke="#D8E2EA" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 14"/>
+
+  <rect x="128" y="618" width="1138" height="102" rx="22" fill="#FFFFFF" stroke="#1F2A37" stroke-width="4"/>
+  <text x="162" y="666" fill="#1F2A37" font-size="30" font-family="Comic Sans MS, Marker Felt, cursive">常见涌现能力:</text>
+  <text x="402" y="666" fill="#44515E" font-size="27" font-family="IBM Plex Sans, sans-serif">推理、代码、多语言、长上下文跟随</text>
+</svg>

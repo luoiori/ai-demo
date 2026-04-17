@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 分享演示 | 我们是 LLM</title>
+    <link rel="stylesheet" href="./vendor/github-markdown-light.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">AI 分享演示</p>
+          <h1>我们是 LLM</h1>
+          <p class="brand-copy">
+            技术分享页面，左侧章节导航，右侧 Markdown 编辑与实时预览。
+          </p>
+        </div>
+
+        <nav class="chapter-nav" aria-label="章节导航">
+          <a class="chapter-link is-active" href="#chapter-01">
+            <span class="chapter-index">Chapter 01</span>
+            <span class="chapter-title">我们是 LLM</span>
+          </a>
+        </nav>
+
+        <section class="section-nav" aria-labelledby="section-nav-title">
+          <div class="section-nav-head">
+            <h2 id="section-nav-title">本章目录</h2>
+            <span id="source-status" class="status-pill">本地内容</span>
+          </div>
+          <ul id="section-list" class="section-list"></ul>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        <header class="content-header">
+          <div>
+            <p class="content-kicker">Tech Talk Demo</p>
+            <h2 id="chapter-01">第一章：我们是 LLM</h2>
+          </div>
+          <div class="header-meta">
+            <span class="meta-pill">Markdown Live Preview</span>
+            <span id="content-stats" class="meta-pill meta-pill-muted">加载中</span>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>Markdown 源内容</h3>
+            <button id="reset-button" type="button">恢复初稿</button>
+          </div>
+          <textarea
+            id="markdown-input"
+            spellcheck="false"
+            aria-label="Markdown 编辑器"
+          ></textarea>
+        </section>
+
+        <section class="panel preview-panel">
+          <div class="panel-head">
+            <h3>实时预览</h3>
+            <span class="panel-note">使用本地资源，无外链依赖</span>
+          </div>
+          <article id="markdown-preview" class="markdown-body"></article>
+        </section>
+      </main>
+    </div>
+
+    <script src="./vendor/marked.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

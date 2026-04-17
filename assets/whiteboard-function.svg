@@ -1,0 +1,35 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="820" rx="40" fill="#FDFCF8"/>
+  <rect x="28" y="28" width="1344" height="764" rx="30" fill="#FFFDF9" stroke="#1F2A37" stroke-width="5"/>
+  <text x="84" y="114" fill="#1F2A37" font-size="44" font-family="Comic Sans MS, Marker Felt, cursive">工程类比：把 LLM 看成一个超大函数</text>
+
+  <rect x="120" y="276" width="250" height="160" rx="28" fill="#EAF4FF" stroke="#0F6CBD" stroke-width="4"/>
+  <text x="182" y="338" fill="#0F6CBD" font-size="40" font-family="Comic Sans MS, Marker Felt, cursive">输入文本</text>
+  <text x="182" y="387" fill="#44515E" font-size="26" font-family="IBM Plex Sans, sans-serif">问题 / 指令 / 上下文</text>
+
+  <rect x="488" y="210" width="430" height="292" rx="32" fill="#FFFFFF" stroke="#1F2A37" stroke-width="5"/>
+  <text x="566" y="294" fill="#1F2A37" font-size="56" font-family="Comic Sans MS, Marker Felt, cursive">f(text) -&gt; text</text>
+  <text x="564" y="356" fill="#5B6773" font-size="28" font-family="IBM Plex Sans, sans-serif">大量参数 + 多层 Transformer</text>
+  <text x="546" y="410" fill="#E11D48" font-size="32" font-family="Comic Sans MS, Marker Felt, cursive">训练 = 持续调参，让输出更像人类语言</text>
+
+  <rect x="1038" y="276" width="250" height="160" rx="28" fill="#EEFBEA" stroke="#2E7D32" stroke-width="4"/>
+  <text x="1100" y="338" fill="#2E7D32" font-size="40" font-family="Comic Sans MS, Marker Felt, cursive">输出文本</text>
+  <text x="1078" y="387" fill="#44515E" font-size="26" font-family="IBM Plex Sans, sans-serif">答案 / 代码 / 总结</text>
+
+  <path d="M370 356C408 356 444 356 480 356" stroke="#1F2A37" stroke-width="5" stroke-linecap="round"/>
+  <path d="M456 337L486 356L456 375" stroke="#1F2A37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M920 356C958 356 994 356 1030 356" stroke="#1F2A37" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1006 337L1036 356L1006 375" stroke="#1F2A37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M592 560C636 616 726 650 840 642" stroke="#D97706" stroke-width="5" stroke-linecap="round"/>
+  <text x="846" y="654" fill="#B45309" font-size="32" font-family="Comic Sans MS, Marker Felt, cursive">“像超大函数”是最容易讲清楚的工程心智模型</text>
+
+  <rect x="144" y="590" width="350" height="118" rx="24" fill="#FFF4D8" stroke="#D97706" stroke-width="4"/>
+  <text x="182" y="644" fill="#B45309" font-size="34" font-family="Comic Sans MS, Marker Felt, cursive">训练前：参数是随机的</text>
+  <text x="180" y="684" fill="#5B6773" font-size="24" font-family="IBM Plex Sans, sans-serif">表现像“不会说话”的函数</text>
+
+  <rect x="944" y="590" width="310" height="118" rx="24" fill="#EAF4FF" stroke="#0F6CBD" stroke-width="4"/>
+  <text x="978" y="644" fill="#0F6CBD" font-size="34" font-family="Comic Sans MS, Marker Felt, cursive">训练后：参数更合适</text>
+  <text x="978" y="684" fill="#5B6773" font-size="24" font-family="IBM Plex Sans, sans-serif">输出越来越像人类写作</text>
+</svg>

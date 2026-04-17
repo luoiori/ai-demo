@@ -1,0 +1,73 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: 700 30px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .label { font: 700 24px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .body { font: 400 18px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #475569; }
+      .small { font: 400 16px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #64748b; }
+      .mono { font: 600 18px 'SFMono-Regular', Consolas, monospace; fill: #0f172a; }
+      .num { font: 700 20px 'SFMono-Regular', Consolas, monospace; fill: #0f172a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" rx="24" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="1152" height="652" rx="20" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+
+  <text x="72" y="86" class="title">LLM 从输入到输出的核心流程</text>
+  <text x="72" y="118" class="small">把一句话切分、表示、计算，再得到下一步最可能输出的内容。</text>
+
+  <rect x="72" y="168" width="180" height="110" rx="16" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2"/>
+  <text x="162" y="210" text-anchor="middle" class="label">输入文本</text>
+  <text x="162" y="240" text-anchor="middle" class="body">今天天气很好</text>
+  <text x="162" y="266" text-anchor="middle" class="body">我想去 ...</text>
+
+  <rect x="300" y="168" width="180" height="110" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="390" y="210" text-anchor="middle" class="label">Token 切分</text>
+  <text x="390" y="252" text-anchor="middle" class="mono">["今天","天气",...]</text>
+
+  <rect x="528" y="168" width="180" height="110" rx="16" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="618" y="210" text-anchor="middle" class="label">向量表示</text>
+  <text x="618" y="252" text-anchor="middle" class="body">把词变成数值向量</text>
+
+  <rect x="756" y="168" width="180" height="110" rx="16" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+  <text x="846" y="210" text-anchor="middle" class="label">Transformer</text>
+  <text x="846" y="240" text-anchor="middle" class="body">结合上下文</text>
+  <text x="846" y="266" text-anchor="middle" class="body">计算注意力关系</text>
+
+  <rect x="984" y="168" width="144" height="110" rx="16" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+  <text x="1056" y="210" text-anchor="middle" class="label">输出候选</text>
+  <text x="1056" y="252" text-anchor="middle" class="body">下一步内容</text>
+
+  <path d="M252 223H288" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M480 223H516" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M708 223H744" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M936 223H972" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M278 209L292 223L278 237" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M506 209L520 223L506 237" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M734 209L748 223L734 237" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M962 209L976 223L962 237" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="72" y="344" width="1056" height="272" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="104" y="390" class="label">下一步 token 的概率分布</text>
+
+  <rect x="108" y="430" width="90" height="36" rx="18" fill="#DBEAFE"/>
+  <text x="153" y="453" text-anchor="middle" class="body" fill="#1D4ED8">公园</text>
+  <rect x="232" y="439" width="360" height="14" rx="7" fill="#2563EB"/>
+  <text x="616" y="453" class="num">0.35</text>
+
+  <rect x="108" y="486" width="90" height="36" rx="18" fill="#FFEDD5"/>
+  <text x="153" y="509" text-anchor="middle" class="body" fill="#C2410C">散步</text>
+  <rect x="232" y="495" width="268" height="14" rx="7" fill="#EA580C"/>
+  <text x="524" y="509" class="num">0.24</text>
+
+  <rect x="108" y="542" width="90" height="36" rx="18" fill="#DCFCE7"/>
+  <text x="153" y="565" text-anchor="middle" class="body" fill="#15803D">打球</text>
+  <rect x="232" y="551" width="182" height="14" rx="7" fill="#16A34A"/>
+  <text x="438" y="565" class="num">0.16</text>
+
+  <rect x="768" y="418" width="320" height="146" rx="16" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="796" y="456" class="label">关键点</text>
+  <text x="796" y="492" class="body">模型不是一次“想完”再回答。</text>
+  <text x="796" y="520" class="body">它是沿着上下文连续预测下一步。</text>
+  <text x="796" y="548" class="body">连续多次预测之后，就形成完整句子。</text>
+</svg>

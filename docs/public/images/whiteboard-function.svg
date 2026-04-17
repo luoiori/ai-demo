@@ -1,0 +1,45 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: 700 30px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .label { font: 700 24px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .body { font: 400 18px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #475569; }
+      .small { font: 400 16px 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #64748b; }
+      .mono { font: 700 34px 'SFMono-Regular', Consolas, monospace; fill: #0f172a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" rx="24" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="1152" height="652" rx="20" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+
+  <text x="72" y="86" class="title">把 LLM 先看成一个超大函数</text>
+  <text x="72" y="118" class="small">这个类比不完整，但非常适合第一次建立工程直觉。</text>
+
+  <rect x="92" y="220" width="220" height="140" rx="18" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2"/>
+  <text x="202" y="272" text-anchor="middle" class="label">输入文本</text>
+  <text x="202" y="308" text-anchor="middle" class="body">问题、指令、上下文</text>
+
+  <rect x="410" y="184" width="380" height="212" rx="20" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="600" y="270" text-anchor="middle" class="mono">f(text) → text</text>
+  <text x="600" y="316" text-anchor="middle" class="body">大量参数 + 多层 Transformer</text>
+  <text x="600" y="348" text-anchor="middle" class="body">把输入映射成更合适的输出</text>
+
+  <rect x="888" y="220" width="220" height="140" rx="18" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+  <text x="998" y="272" text-anchor="middle" class="label">输出文本</text>
+  <text x="998" y="308" text-anchor="middle" class="body">答案、代码、总结</text>
+
+  <path d="M312 290H386" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M348 276L388 290L348 304" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M790 290H864" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M826 276L866 290L826 304" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="92" y="472" width="454" height="124" rx="18" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="122" y="516" class="label">训练前</text>
+  <text x="122" y="550" class="body">参数接近随机，输出质量很差。</text>
+  <text x="122" y="578" class="body">可以把它看成“还不会正确说话的函数”。</text>
+
+  <rect x="654" y="472" width="454" height="124" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="684" y="516" class="label">训练后</text>
+  <text x="684" y="550" class="body">通过海量样本不断调参，输出逐渐稳定。</text>
+  <text x="684" y="578" class="body">于是模型开始表现得越来越像人在写作和回答。</text>
+</svg>
