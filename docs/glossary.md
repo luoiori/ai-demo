@@ -1,7 +1,264 @@
-# 常见名称解释
+<style>
+.card { background: #f5f7fa; border-radius: 12px; padding: 12px 16px; margin: 10px 0; border-left: 4px solid #4a90e2; line-height: 1.5; }
+.card-error { background: #fef5f5; border-left-color: #e74c3c; }
+.card-success { background: #f0f9ff; border-left-color: #3498db; }
+.card-warning { background: #fffbf0; border-left-color: #f39c12; }
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
+.section-header { font-size: 1.8em; margin: 30px 0 20px 0; }
+.badge { display: inline-block; background: #e8f4f8; color: #2c3e50; padding: 4px 12px; border-radius: 6px; font-size: 0.9em; margin: 5px 5px 5px 0; }
+.highlight { background: #fff3cd; padding: 2px 6px; border-radius: 4px; }
+.evolution-chain { text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0; }
+.evolution-items { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 15px; }
+.evolution-item { background: rgba(255,255,255,0.2); padding: 10px 16px; border-radius: 8px; font-weight: bold; }
+.card h4 { margin: 0 0 8px 0; }
+.card p { margin: 6px 0; }
+</style>
 
+# 常见名词解释
 
-## [Token](https://platform.openai.com/tokenizer)
+## 🧠 LLM — AI的大脑
+
+<div class="card-grid">
+  <div class="card card-error">
+    <h4>❌ 常见误区</h4>
+    <p><strong>"LLM = 更聪明的搜索引擎"</strong></p>
+    <p>你问它问题，它从数据库里找答案</p>
+  </div>
+  <div class="card card-success">
+    <h4>✓ 本质</h4>
+    <p><strong>LLM = <span class="highlight">概率生成器</span></strong></p>
+    <p>Next Token Prediction — 一个字一个字"接龙"出来的</p>
+  </div>
+</div>
+
+<div class="card">
+  <p>💬 会「胡说八道」→ 追求「合理」而非「正确」</p>
+  <p>✨ 有创造力 → 本质就是创造性接龙</p>
+</div>
+
+<div class="card card-warning">
+  <strong>记住：</strong>不是知识库，是生成器 → 所以它会"说错"，也因此有"创造力"
+</div>
+
+---
+
+## 🧩 [Token](https://platform.openai.com/tokenizer) — AI的语言单位
+
+<div class="card">
+  <p><strong>Token ≠ 字 ≠ 词</strong> — 是 AI 切割文本的最小碎片</p>
+  <div style="margin: 15px 0;">
+    <span class="badge">English</span>
+    <span class="badge">Chat</span>
+    <span class="badge">GPT</span>
+    <span style="margin: 0 10px;">=</span>
+    <strong>2 tokens</strong>
+  </div>
+  <div>
+    <span class="badge">中文</span>
+    <span class="badge">人工</span>
+    <span class="badge">智</span>
+    <span class="badge">能</span>
+    <span style="margin: 0 10px;">=</span>
+    <strong>3-5 tokens</strong>
+  </div>
+</div>
+
+<div class="card card-warning">
+  <h4>01 省钱</h4>
+    <p>中文 Token ≈ 英文 1.5~2x → 英文 Prompt 直接省一半</p>
+  <h4>02 理解限制</h4>
+    <p>对话截断 / AI 变笨 → Token 数量触顶了</p>
+  <h4>03 解释定价</h4>
+  <p>GPT-4 比 3.5 贵 10x → 每个 Token 的算力指数级增长</p>
+</div>
+
+---
+
+## 📖 Context — AI的工作记忆
+
+<div class="card card-success">
+  <h4>🪑 办公桌类比</h4>
+  <p><strong>Context Window = 桌面大小</strong> → 对话、指令、系统提示全铺在上面 → 桌满了早期内容掉到地上</p>
+</div>
+
+<div class="card">
+  <h4>Context Window 进化</h4>
+  <div style="display: flex; justify-content: space-around; margin-top: 15px;">
+    <div style="text-align: center;">
+      <div style="background: #e8f4f8; padding: 10px; border-radius: 8px; margin-bottom: 5px;">4K</div>
+      <small>GPT-3.5</small>
+    </div>
+    <div style="text-align: center;">
+      <div style="background: #d4e9f7; padding: 10px; border-radius: 8px; margin-bottom: 5px;">128K</div>
+      <small>GPT-4</small>
+    </div>
+    <div style="text-align: center;">
+      <div style="background: #b8daf0; padding: 10px; border-radius: 8px; margin-bottom: 5px;">200K</div>
+      <small>Claude</small>
+    </div>
+    <div style="text-align: center;">
+      <div style="background: #9ccbe8; padding: 10px; border-radius: 8px; margin-bottom: 5px;">1~2M</div>
+      <small>Gemini</small>
+    </div>
+  </div>
+</div>
+
+<div class="card card-error">
+  <strong>Context ≠ 记忆</strong> — 每次对话从零开始，塞什么决定AI是专家还是废物
+</div>
+
+---
+
+## 💬 Prompt — 不是提问，是编程
+
+<div class="card-grid">
+  <div class="card card-error">
+    <h4>❌ 模糊指令</h4>
+    <p>"帮我写个登录页面"</p>
+    <p style="margin-top: 10px;">AI只能猜 → 输出质量随机</p>
+  </div>
+  <div class="card card-success">
+    <h4>✓ 结构化指令</h4>
+    <p>角色 + 技术栈 + 需求细节<br>+ 验证规则 + API + 样式方案</p>
+    <p style="margin-top: 10px;">AI直接执行 → 输出质量 <strong>10x</strong></p>
+  </div>
+</div>
+
+<div class="card card-warning">
+  <strong>Prompt Engineering</strong> = 把脑子里的模糊想法 → 翻译成AI能精确理解的 结构化指令
+</div>
+
+---
+
+## 🔧 Tool — 从说到做的质变
+
+<div class="card-grid">
+  <div class="card card-error">
+    <h4>没有 Tool</h4>
+    <h3>🗣️ 嘴强王者</h3>
+    <p>能写SQL → 不能执行<br>能说怎么改 → 不能动文件</p>
+  </div>
+  <div class="card card-success">
+    <h4>有了 Tool</h4>
+    <h3>⚡ 实干执行者</h3>
+    <p>读文件 · 改代码 · 跑命令<br>调API · 查数据库 · 开浏览器</p>
+  </div>
+</div>
+
+<div class="card card-warning">
+  从这一层开始，AI不再只是辅助 → 开始<strong>真正替代部分人类劳动</strong>
+</div>
+
+---
+
+## 🤖 Agent — 自主决策
+
+<div class="card card-error">
+  <h4>误区：AI + Tool = Agent? ✗ 不是</h4>
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h4>🔧 有Tool但没Agent</h4>
+    <p>你：查上月销售数据<br>AI：查完了，给你</p>
+    <p>你：做个图表<br>AI：做完了，给你</p>
+    <p style="margin-top: 10px;">↑ 每一步都需要你来驱动</p>
+  </div>
+  <div class="card card-success">
+    <h4>🤖 Agent 模式</h4>
+    <p>你：分析上月销售情况</p>
+    <p>Agent → 查数据库<br>Agent → 数据清洗 + 图表<br>Agent → 发现区域下滑 → 深查<br>Agent → 输出分析报告</p>
+    <p style="margin-top: 10px;">↑ 你给目标，它决定路径</p>
+  </div>
+</div>
+
+<div class="card card-warning">
+  从"听话干活的工具人" → <strong>"能独立思考的项目经理"</strong>
+</div>
+
+---
+
+## 🔌 MCP — AI的USB-C接口
+
+<div class="card-grid">
+  <div class="card card-error">
+    <h4>没有 MCP</h4>
+    <p>数据库 → 一套对接代码<br>浏览器 → 又一套对接代码<br>GitHub → 再一套对接代码</p>
+    <p style="margin-top: 10px;">每个工具各搞一套 → 重复造轮子</p>
+  </div>
+  <div class="card card-success">
+    <h4>有了 MCP</h4>
+    <div style="margin: 10px 0;">
+      <span class="badge">Playwright</span>
+      <span class="badge">FileSystem</span>
+      <span class="badge">DB</span>
+      <span class="badge">GitHub</span>
+    </div>
+    <p style="text-align: center; font-size: 1.2em; margin: 10px 0;">⟷ 一个标准协议</p>
+    <p>即插即用 · 一次接入 · 全部打通</p>
+  </div>
+</div>
+
+<div class="card card-warning">
+  <strong>MCP 不是工具，是基础设施</strong> — 就像 USB-C 改变了硬件生态
+</div>
+
+---
+
+## ⭐ Agent Skill — 从通才到专家
+
+<div class="card-grid">
+  <div class="card">
+    <h4>🩺 全科医生</h4>
+    <p>什么都能看<br>什么都一般</p>
+    <div style="margin-top: 15px;">
+      <div style="background: #ddd; height: 8px; border-radius: 4px; width: 60%;"></div>
+      <p style="margin-top: 5px;"><strong>60分</strong></p>
+    </div>
+  </div>
+  <div class="card card-success">
+    <h4>👨‍⚕️ 专科专家</h4>
+    <p>封装专属工作流<br>特定任务卓越表现</p>
+    <div style="margin-top: 15px;">
+      <div style="background: #f39c12; height: 8px; border-radius: 4px; width: 90%;"></div>
+      <p style="margin-top: 5px;"><strong>90分</strong></p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h4>一个 Skill 包含：</h4>
+  <div style="margin-top: 10px;">
+    <span class="badge">系统提示词</span>
+    <span class="badge">工作流程</span>
+    <span class="badge">工具组合</span>
+    <span class="badge">质量标准</span>
+  </div>
+</div>
+
+<div class="card card-warning">
+  <strong>Agent 给了 决策力，Skill 给了 专业深度</strong>
+</div>
+
+---
+
+<div class="evolution-chain">
+  <h2 style="margin-top:0;">AI 能力进化全链路</h2>
+  <div class="evolution-items">
+    <div class="evolution-item">LLM<br><small>思考</small></div>
+    <div class="evolution-item">Token<br><small>语言</small></div>
+    <div class="evolution-item">Context<br><small>记忆</small></div>
+    <div class="evolution-item">Prompt<br><small>指令</small></div>
+    <div class="evolution-item">Tool<br><small>动手</small></div>
+    <div class="evolution-item">Agent<br><small>决策</small></div>
+    <div class="evolution-item">MCP<br><small>连接</small></div>
+    <div class="evolution-item">Skill<br><small>专精</small></div>
+  </div>
+</div>
+
+---
+
+## Token
 
 Token 是模型处理文本的最小单位。模型不直接处理整句话，而是先把文本切成碎片，每一块叫一个 Token。
 
